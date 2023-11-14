@@ -103,7 +103,7 @@ def api_presales():
         value_list.append(inputbody_dict[i])
 
     value_list.append(f'=PROPER(REGEXREPLACE(P{row_num}, "\.", " "))')
-    value_list.append(f'=REGEXREPLACE(REGEXREPLACE(REGEXREPLACE(G{row_num}, "@highercloud.com.tw", ""),"\[",""),"\]","")')
+    value_list.append(f'=REGEXREPLACE(REGEXREPLACE(REGEXREPLACE(G{row_num}, "gmail.com", ""),"\[",""),"\]","")')
     value_list.append(f'=M{row_num}-E{row_num}')
     value_list.append(inputbody_dict['4'])
     ########整理##########
